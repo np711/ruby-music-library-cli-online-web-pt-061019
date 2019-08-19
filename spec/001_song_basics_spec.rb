@@ -3,8 +3,15 @@ require "spec_helper"
 describe "Song" do
   let(:song) { Song.new("In the Aeroplane Over the Sea") }
   
-  Song.new("Blank Space").name 
+  Song.new("Kaohsiung Christmas").name  
   Song.all 
+  
+  Song.destroy_all
+  Song.all 
+  
+  Song.create("BlankSpace")
+  Song.all 
+  
   Artist.all 
   
   describe "#initialize" do
